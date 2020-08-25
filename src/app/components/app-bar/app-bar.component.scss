@@ -23,9 +23,6 @@
     &::after,
     &::before {
       content: '';
-      background-image: url(/src/assets/indent__semi-circle.svg);
-      background-repeat: no-repeat;
-      position: absolute;
       height: 1px;
       background-color: #E0E0E0;
       right: 0;
