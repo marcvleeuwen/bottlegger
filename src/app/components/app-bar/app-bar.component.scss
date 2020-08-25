@@ -86,11 +86,14 @@
 }
 
 .link__icon {
+  font-weight: lighter;
   &:hover {
     cursor: pointer;
   }
+
   &-active {
-    color: red;
+    font-family: 'Material Icons';
+    font-weight: bolder;
   }
 }
 
