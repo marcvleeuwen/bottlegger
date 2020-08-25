@@ -22,6 +22,7 @@
     &::after,
     &::before {
       content: '';
+      position: absolute;
       height: 1px;
       background-color: #E0E0E0;
       right: 0;
@@ -83,3 +84,15 @@
     border-top: none;
   }
 }
+
+.link__icon {
+  &:hover {
+    cursor: pointer;
+  }
+  &-active {
+    color: red;
+  }
+}
+
+
+
