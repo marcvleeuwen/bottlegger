@@ -11,11 +11,7 @@ export class AppBarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.positionFabNotch();
-  }
-
-  private positionFabNotch(): void {
-  //
+    
   }
 
 }
