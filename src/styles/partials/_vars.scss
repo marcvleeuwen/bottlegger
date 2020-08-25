@@ -1,0 +1,52 @@
+// Light Theme Text
+$dark-text: #353535;
+$dark-primary-text: rgba($dark-text, 0.87);
+$dark-accent-text: rgba($dark-primary-text, 0.54);
+$dark-disabled-text: rgba($dark-primary-text, 0.38);
+$dark-dividers: rgba($dark-primary-text, 0.12);
+$dark-focused: rgba($dark-primary-text, 0.12);
+
+// Light bg
+$light-background:    #ffffff;
+$light-bg-darker-5:   darken($light-background, 5%);
+$light-bg-darker-10:  darken($light-background, 10%);
+$light-bg-darker-20:  darken($light-background, 20%);
+$light-bg-darker-30:  darken($light-background, 30%);
+$light-bg-lighter-5:  lighten($light-background, 5%);
+$dark-bg-tooltip:     lighten(#353535, 20%);
+$dark-bg-alpha-4:     rgba(#353535, 0.04);
+$dark-bg-alpha-12:    rgba(#353535, 0.12);
+
+// Dark Theme text
+$light-text: #ffffff;
+$light-primary-text: $light-text;
+$light-accent-text: rgba($light-primary-text, 0.7);
+$light-disabled-text: rgba($light-primary-text, 0.5);
+$light-dividers: rgba($light-primary-text, 0.12);
+$light-focused: rgba($light-primary-text, 0.12);
+
+// Dark bg
+$dark-background:     #353535;
+$dark-bg-lighter-5:   lighten($dark-background, 5%);
+$dark-bg-lighter-10:  lighten($dark-background, 10%);
+$dark-bg-lighter-20:  lighten($dark-background, 20%);
+$dark-bg-lighter-30:  lighten($dark-background, 30%);
+$light-bg-alpha-4:    rgba(#ffffff, 0.04);
+$light-bg-alpha-12:   rgba(#ffffff, 0.12);
+
+// accent
+$accent-main: #7014f2;
+$accent-lighter: #d4b9fb;
+$accent-darker: #530bec;
+$accent-200: #7014f2;
+
+// warn
+$warn-main: #ea0000;
+$warn-lighter: #f9b3b3;
+$warn-darker: #e10000;
+$warn-200: #ea0000;
+
+// sizing
+$page-content-width: 345px;
+$padding: 15px;
+

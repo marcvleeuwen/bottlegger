@@ -1,0 +1,11 @@
+@import "partials/vars";
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  color: $dark-text;
+}
