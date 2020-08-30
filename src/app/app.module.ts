@@ -5,7 +5,6 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HomeComponent} from "./pages/home/home.component";
 import {AppBarModule} from "./components/app-bar/app-bar.module";
-import { PostCardComponent } from './components/post-card/post-card.component';
 import {PostCardModule} from "./components/post-card/post-card.module";
 
 @NgModule({
