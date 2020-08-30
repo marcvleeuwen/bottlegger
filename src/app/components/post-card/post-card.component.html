@@ -1,16 +1,18 @@
 <header>
   <div class="user-details">
     <img
-      src="https://images.unsplash.com/photo-1598330596736-569ac71ce972?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=658&q=80"
-      alt="" class="post__profile-image">
+      alt=""
+      class="post__profile-image" [src]="data.userData?.profilePicture">
     <div class="post__user">
-      <p class="username">{{data?.userData?.username|| 'Bruce Wayne'}}</p>
-      <p class="location">{{data?.location || 'Johannesburg, South Africa'}}</p>
+      <p class="username">{{data.userData?.username || 'Bruce Wayne'}}</p>
+      <p class="location">{{data.location || 'Johannesburg, South Africa'}}</p>
     </div>
   </div>
   <div class="material-icons">more_horiz</div>
 </header>
-<img src="https://images.unsplash.com/photo-1598318607852-5b5106a48d02?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=676&q=80" alt="" class="post__image">
+<img
+  alt=""
+  class="post__image" [src]="data.image">
 <footer>
   <div class="post__actions">
     <div>
@@ -20,8 +22,10 @@
     <i class="material-icons post__actions-icon">send</i>
   </div>
   <div class="post__wording">
-    <div class="description"><strong>{{data?.userData?.username|| 'Bruce Wayne'}}</strong>This is the post description.</div>
-    <div class="comments">View {{data?.comments?.length || 1}} {{data?.comments?.length > 1 ? 'comments' : 'comment'}}</div>
-    <div class="timestamp">20 minutes ago</div>
+    <div class="description"><strong>{{data?.userData?.username || 'Bruce Wayne'}} </strong>This is the post description.
+    </div>
+    <div *ngIf="data?.comments?.length > 0" class="comments">
+      View {{data?.comments?.length || 1}} {{data?.comments?.length > 1 ? 'comments' : 'comment'}}</div>
+    <div class="timestamp">{{postAge(data.timestamp)}}</div>
   </div>
 </footer>

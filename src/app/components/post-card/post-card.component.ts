@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {PostData} from "./models/post-data.model";
+import {PostData} from './models/post-data.model';
+import * as moment from 'Moment';
 
 @Component({
   selector: 'app-post-card',
@@ -14,6 +15,10 @@ export class PostCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  postAge(timestamp: string): string {
+    return moment(timestamp).fromNow() || 'unknown time';
   }
 
 }
