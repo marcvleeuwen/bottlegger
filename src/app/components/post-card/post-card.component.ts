@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {PostData} from './models/post-data.model';
-import * as moment from 'Moment';
+import * as moment from "moment";
 
 @Component({
   selector: 'app-post-card',
