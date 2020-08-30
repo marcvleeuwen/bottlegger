@@ -12,5 +12,6 @@ export interface PostData {
   comments: Array<PostComment>;
   postUrl: string;
   timestamp: string;
+  isFavorite: boolean;
   location?: string;
 }

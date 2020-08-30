@@ -1,4 +1,4 @@
 <main class="scroll-padding">
-  <app-post-card *ngFor="let post of posts" [data]="post"></app-post-card>
+  <app-post-card *ngFor="let post of posts" [data]="post" (postMenuClicked)="onPostMenuClicked($event)"></app-post-card>
 </main>
 <app-bar></app-bar>

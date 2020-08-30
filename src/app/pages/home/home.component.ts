@@ -10,7 +10,24 @@ export class HomeComponent implements OnInit {
 
   posts: Array<PostData> = [
     {
-      comments: [],
+      comments: [
+        {
+          timestamp: new Date().toISOString(),
+          username: '',
+          profilePicture: '',
+          replies: []
+        }, {
+          timestamp: new Date().toISOString(),
+          username: '',
+          profilePicture: '',
+          replies: []
+        }, {
+          timestamp: new Date().toISOString(),
+          username: '',
+          profilePicture: '',
+          replies: []
+        }
+      ],
       location: '',
       userData: {
         username: 'Ploppies',
@@ -21,8 +38,9 @@ export class HomeComponent implements OnInit {
       description: 'this is the description for post 1',
       postId: '0',
       postUrl: '',
-      timestamp: new Date('2020/08/29').toISOString()
-    },{
+      timestamp: new Date('2020/08/29').toISOString(),
+      isFavorite: true
+    }, {
       comments: [],
       location: '',
       userData: {
@@ -34,9 +52,27 @@ export class HomeComponent implements OnInit {
       description: 'this is the description for post 2',
       postId: '1',
       postUrl: '',
-      timestamp: new Date('2020/08/30').toISOString()
-    },{
-      comments: [],
+      timestamp: new Date('2020/08/30').toISOString(),
+      isFavorite: false
+    }, {
+      comments: [
+        {
+          timestamp: new Date().toISOString(),
+          username: '',
+          profilePicture: '',
+          replies: []
+        }, {
+          timestamp: new Date().toISOString(),
+          username: '',
+          profilePicture: '',
+          replies: []
+        }, {
+          timestamp: new Date().toISOString(),
+          username: '',
+          profilePicture: '',
+          replies: []
+        }
+      ],
       location: '',
       userData: {
         username: 'SpiderMan',
@@ -47,8 +83,9 @@ export class HomeComponent implements OnInit {
       description: 'this is the description for post 2',
       postId: '2',
       postUrl: '',
-      timestamp: new Date('2020/08/30').toISOString()
-    },{
+      timestamp: new Date('2020/08/30').toISOString(),
+      isFavorite: true
+    }, {
       comments: [],
       location: '',
       userData: {
@@ -60,9 +97,17 @@ export class HomeComponent implements OnInit {
       description: 'this is the description for post 2',
       postId: '3',
       postUrl: '',
-      timestamp: new Date('2020/07/30').toISOString()
-    },{
-      comments: [],
+      timestamp: new Date('2020/07/30').toISOString(),
+      isFavorite: false
+    }, {
+      comments: [
+        {
+          timestamp: new Date().toISOString(),
+          username: '',
+          profilePicture: '',
+          replies: []
+        }
+      ],
       location: '',
       userData: {
         username: 'Billy_bob',
@@ -73,7 +118,8 @@ export class HomeComponent implements OnInit {
       description: 'this is the description for post 2',
       postId: '4',
       postUrl: '',
-      timestamp: new Date('2020/08/31').toISOString()
+      timestamp: new Date('2020/08/31').toISOString(),
+      isFavorite: false
     },
   ]
 
@@ -85,6 +131,10 @@ export class HomeComponent implements OnInit {
 
   randomId(): number {
     return Math.floor((Math.random() * 99));
+  }
+
+  onPostMenuClicked(postId: string): void {
+    alert(`open button sheet as overlay for post ${postId}`);
   }
 
 }

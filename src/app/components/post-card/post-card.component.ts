@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {PostData} from './models/post-data.model';
 import * as moment from "moment";
 
@@ -10,6 +10,7 @@ import * as moment from "moment";
 export class PostCardComponent implements OnInit {
 
   @Input() data: PostData;
+  @Output() postMenuClicked: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {
   }
@@ -19,6 +20,14 @@ export class PostCardComponent implements OnInit {
 
   postAge(timestamp: string): string {
     return moment(timestamp).fromNow() || 'unknown time';
+  }
+
+  onFavoriteClick(): void {
+    this.data.isFavorite = !this.data.isFavorite;
+  }
+
+  onPostMenuClick(postId: string): void {
+    this.postMenuClicked.emit(postId);
   }
 
 }

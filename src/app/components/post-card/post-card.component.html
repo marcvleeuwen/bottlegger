@@ -1,28 +1,30 @@
 <header>
   <div class="user-details">
     <img
-      alt=""
-      class="post__profile-image" [src]="data.userData?.profilePicture">
+      [src]="data.userData?.profilePicture"
+      alt="" class="post__profile-image">
     <div class="post__user">
-      <p class="username">{{data.userData?.username || 'Bruce Wayne'}}</p>
+      <p class="username">{{data.userData?.username}}</p>
       <p class="location">{{data.location || 'Johannesburg, South Africa'}}</p>
     </div>
   </div>
-  <div class="material-icons">more_horiz</div>
+  <div (click)="onPostMenuClick(data.postId)" class="material-icons post__actions-icon">more_horiz</div>
 </header>
 <img
-  alt=""
-  class="post__image" [src]="data.image">
+  [src]="data.image"
+  alt="" class="post__image">
 <footer>
   <div class="post__actions">
     <div>
-      <i class="material-icons post__actions-icon">favorite_border</i>
-      <i class="material-icons post__actions-icon">chat</i>
+      <i (click)="onFavoriteClick()"
+         [class.post__actions-icon__active]="data.isFavorite"
+         class="material-icons post__actions-icon">{{data.isFavorite ? 'favorite' : 'favorite_border'}}</i>
+      <i class="material-icons post__actions-icon">chat_bubble_outline</i>
     </div>
     <i class="material-icons post__actions-icon">send</i>
   </div>
   <div class="post__wording">
-    <div class="description"><strong>{{data?.userData?.username || 'Bruce Wayne'}} </strong>This is the post description.
+    <div class="description"><strong>{{data?.userData?.username}} </strong>{{data.description}}
     </div>
     <div *ngIf="data?.comments?.length > 0" class="comments">
       View {{data?.comments?.length || 1}} {{data?.comments?.length > 1 ? 'comments' : 'comment'}}</div>
